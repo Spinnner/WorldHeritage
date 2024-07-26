@@ -1,4 +1,4 @@
-package com.spinner.worldheritage.ui.theme
+package com.spinner.worldheritage.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

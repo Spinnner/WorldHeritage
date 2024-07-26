@@ -1,4 +1,4 @@
-package com.spinner.worldheritage.ui.theme
+package com.spinner.worldheritage.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
