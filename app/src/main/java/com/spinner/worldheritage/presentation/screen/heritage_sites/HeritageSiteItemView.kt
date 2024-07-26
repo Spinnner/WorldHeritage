@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.spinner.worldheritage.domain.common.CommonMockResponseFactory
@@ -40,8 +41,9 @@ fun HeritageSiteItemView(
         )
         Spacer(modifier = Modifier.height(16.dp))
         AsyncImage(
-            modifier = Modifier.size(64.dp),
+            modifier = Modifier.size(24.dp),
             model = site.image,
+            error = painterResource(id = android.R.drawable.stat_notify_error),
             contentDescription = null,
         )
     }
