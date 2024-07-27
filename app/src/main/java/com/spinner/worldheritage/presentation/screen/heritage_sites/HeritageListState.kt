@@ -1,4 +1,4 @@
-package com.spinner.worldheritage.presentation
+package com.spinner.worldheritage.presentation.screen.heritage_sites
 
 import com.spinner.worldheritage.domain.model.HeritageSite
 

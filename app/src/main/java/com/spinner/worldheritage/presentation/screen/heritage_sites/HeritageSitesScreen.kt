@@ -19,8 +19,6 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.spinner.worldheritage.domain.common.CommonMockResponseFactory
-import com.spinner.worldheritage.presentation.HeritageListState
-import com.spinner.worldheritage.presentation.HeritageSitesViewModel
 import com.spinner.worldheritage.presentation.ui.UIModePreviews
 
 @Composable
