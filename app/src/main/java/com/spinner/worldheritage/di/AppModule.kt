@@ -3,6 +3,7 @@ package com.spinner.worldheritage.di
 import android.content.Context
 import com.spinner.worldheritage.data.repository.HeritageRepositoryImpl
 import com.spinner.worldheritage.domain.repository.HeritageRepository
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,11 +13,17 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
+interface AppModule {
 
-    @Provides
-    @Singleton
-    fun provideHeritageRepository(@ApplicationContext context: Context): HeritageRepository {
-        return HeritageRepositoryImpl(context)
+    companion object {
+        @Provides
+        @Singleton
+        fun provideApplicationContext(@ApplicationContext appContext: Context): Context {
+            return appContext
+        }
     }
+
+    @Binds
+    @Singleton
+    fun provideHeritageRepository(heritageRepositoryImpl: HeritageRepositoryImpl): HeritageRepository
 }
